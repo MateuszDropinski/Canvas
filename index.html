@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Canvas</title>
+    <style>
+        body
+        {
+            margin:0px;
+            overflow: hidden;
+            position: relative;
+        }
+        #canvas
+        {
+            background-color: #000000;
+        }
+        h2
+        {
+            position: absolute;
+            top:55%;
+            left:50%;
+            transform: translate(-50%,-50%);
+            z-index:77777;
+            color:#ffffff;
+            font-family: 'calibri';
+            font-size: 32px;
+            text-align: center;
+        }
+        .image
+        {
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-50%,-50%);
+            width: 50%;
+            height: auto;
+            border-radius:10%;
+            cursor:pointer;
+            z-index:2;
+        }
+        .change-image
+        {
+            display:none;
+        }
+        @media screen and (max-width:768px)
+        {
+            .image
+            {
+                width: 75%;
+            }
+            h2
+            {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <canvas id="canvas"></canvas>
+    <input type="file" name="image" class="change-image" accept="image/x-png,image/gif,image/jpeg">
+    <h2>Kliknij w zdjęcie, aby je zmienić!</h2>
+    <img src="image.jpg" class="image">
+    <script src="particles.js"></script>
+    <script src="ambilight.js"></script>
+</body>
+</html>
